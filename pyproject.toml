@@ -1,0 +1,9 @@
+[project]
+name = "dagster-ml-multicode-template"
+version = "0.1.0"
+description = "Dagster ML Multi-Code-Location Template."
+authors = ["Your Name <your@email.com>"]
+requires-python = ">=3.10"
+
+[tool.setuptools]
+# No packages at root, but this enables editable installs if needed

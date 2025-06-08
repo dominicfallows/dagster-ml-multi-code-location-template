@@ -1,0 +1,40 @@
+# dagster_cloud.yaml
+# See: https://docs.dagster.io/deployment/guides/dagster-cloud/deploying-code-locations for full documentation
+#
+# This file configures Dagster code locations for deployment (e.g., Dagster Cloud).
+#
+# ---
+# Template note:
+# - You can rename code locations and packages as needed.
+# - For a multi-repo setup, you can point to remote Python packages or Docker images (see below).
+#
+# Example for a remote code location (multi-repo):
+#
+# locations:
+#   - location_name: etl
+#     code_source:
+#       package_name: my_etl
+#       # Or use a Docker image:
+#       # image: myorg/my-etl:latest
+#
+locations:
+  - location_name: 1-etl
+    build:
+      directory: 1_etl_code_location
+    code_source:
+      package_name: 1_etl
+  - location_name: 2-model
+    build:
+      directory: 2_model_code_location
+    code_source:
+      package_name: 2_model
+  - location_name: 3-evaluate
+    build:
+      directory: 3_evaluate_code_location
+    code_source:
+      package_name: 3_evaluate
+  - location_name: 4-deploy
+    build:
+      directory: 4_deploy_code_location
+    code_source:
+      package_name: 4_deploy
