@@ -88,6 +88,8 @@ See `README-CONVERT-TO-MULTI-REPO.md` for a step-by-step guide to splitting this
 - **4_deploy_code_location**: Packages and serves the trained model for production
 - **shared_code_location**: Utilities and code shared across locations
 
+![Code Locations in Dagster webserver UI](./screenshots/code-locations-in-webserver-ui.png)
+
 ## Example Pipeline Flow
 
 1. **Ingest**: Loads example data from a Dagster resource in `example_resources`
