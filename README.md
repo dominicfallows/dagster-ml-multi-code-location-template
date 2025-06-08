@@ -1,9 +1,11 @@
 # Dagster ML Multi-Code-Location Template
 
-> **This repository is a GitHub Template for building modular, production-grade ML/data pipelines with [Dagster](https://dagster.io) using a multi-code-location architecture.**
->
-> - **Mono-repo default:** This template assumes a mono-repo structure, but you can adapt it for a multi-repo setup (see below)
-> - **To use:** Click "Use this template" on GitHub, then customize code location names, project name, and assets as needed
+**This repository is a GitHub Template for building modular, production-grade ML/data pipelines with [Dagster](https://dagster.io) using a multi-code-location architecture.**
+
+- **Mono-repo default:** This template assumes a mono-repo structure, but you can adapt it for a multi-repo setup (see below)
+- **To use:** Click "Use this template" on GitHub, then customize code location names, project name, and assets as needed
+
+> **Note:** this is a work-in-progress template as I learn the Dagster framework. I've open-sourced this to gain feedback. Please feel free to create Issues and Pull Requests to improve this template. Thank you.
 
 ## Table of Contents
 
