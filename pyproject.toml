@@ -1,5 +1,5 @@
 [project]
-name = "dagster-ml-multicode-template"
+name = "dagster-ml-multi-code-location-template"
 version = "0.1.0"
 description = "Dagster ML Multi-Code-Location Template."
 authors = ["Your Name <your@email.com>"]
