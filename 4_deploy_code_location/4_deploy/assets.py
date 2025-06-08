@@ -1,7 +1,6 @@
 from dagster import asset
 import json
-import os
-from shared import shared_function
+
 
 @asset(required_resource_keys={"output_dir_resource"})
 def deploy_model_asset(context, train_model_asset):

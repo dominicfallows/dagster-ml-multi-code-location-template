@@ -1,5 +1,9 @@
-from dagster import asset
-from shared import shared_function
+from dagster import asset, SourceAsset
+
+
+train_model_asset = SourceAsset("train_model_asset")
+split_asset = SourceAsset("split_asset")
+
 
 @asset
 def evaluate_model_asset(context, train_model_asset, split_asset):
@@ -25,5 +29,6 @@ def evaluate_model_asset(context, train_model_asset, split_asset):
         total += len(tokens)
         in_vocab += sum(1 for t in tokens if t in vocab)
     accuracy = in_vocab / total if total > 0 else 0.0
-    context.log.info(f"Evaluation accuracy: {accuracy:.3f} ({in_vocab}/{total} tokens in vocab)")
+    context.log.info(
+        f"Evaluation accuracy: {accuracy:.3f} ({in_vocab}/{total} tokens in vocab)")
     return {"accuracy": accuracy}

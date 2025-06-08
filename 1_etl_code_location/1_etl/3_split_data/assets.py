@@ -1,12 +1,11 @@
 # Dagster asset for split step
-from dagster import asset, Config
+from dagster import asset
 
-class SplitConfig(Config):
-    train_ratio: float = 0.6  # Default: 60% train
-    validate_ratio: float = 0.2  # Default: 20% validate
-    # Remaining is test
 
-@asset(config_schema=SplitConfig)
+@asset(config_schema={
+    "train_ratio": float,
+    "validate_ratio": float,
+})
 def split_asset(context, tokenize_asset):
     """
     Splits tokenized data into train, validate, and test sets using configurable ratios.
@@ -18,9 +17,11 @@ def split_asset(context, tokenize_asset):
 
     See Dagster concepts: https://docs.dagster.io/getting-started/concepts
     """
+    train_ratio = context.asset_config.get("train_ratio", 0.6)
+    validate_ratio = context.asset_config.get("validate_ratio", 0.2)
     total = len(tokenize_asset)
-    train_end = int(total * context.asset_config.train_ratio)
-    validate_end = train_end + int(total * context.asset_config.validate_ratio)
+    train_end = int(total * train_ratio)
+    validate_end = train_end + int(total * validate_ratio)
     train = tokenize_asset[:train_end]
     validate = tokenize_asset[train_end:validate_end]
     test = tokenize_asset[validate_end:]

@@ -1,5 +1,4 @@
-from dagster import asset
-from shared import shared_function
+from dagster import asset, SourceAsset
 
 # Simple synonym groups for demonstration
 SYNONYM_GROUPS = [
@@ -8,6 +7,9 @@ SYNONYM_GROUPS = [
     {"awesome", "great", "fantastic"},
     {"test", "trial", "experiment"},
 ]
+
+vocab_from_train_data = SourceAsset("vocab_from_train_data")
+
 
 def group_vocab_by_synonym(vocab):
     """
@@ -34,6 +36,7 @@ def group_vocab_by_synonym(vocab):
             used.add(word)
     return grouped
 
+
 @asset
 def train_model_asset(context, vocab_from_train_data):
     """
@@ -47,6 +50,7 @@ def train_model_asset(context, vocab_from_train_data):
     See Dagster concepts: https://docs.dagster.io/getting-started/concepts
     """
     grouped_vocab = group_vocab_by_synonym(vocab_from_train_data)
-    model = {"vocab_size": len(vocab_from_train_data), "grouped_vocab": grouped_vocab}
+    model = {"vocab_size": len(vocab_from_train_data),
+             "grouped_vocab": grouped_vocab}
     context.log.info(f"Trained model with grouped vocab: {model}")
     return model

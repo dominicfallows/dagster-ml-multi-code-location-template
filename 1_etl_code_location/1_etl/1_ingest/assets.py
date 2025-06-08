@@ -1,5 +1,5 @@
 from dagster import asset
-from shared import shared_function
+
 
 @asset(required_resource_keys={"raw_data_resource"})
 def ingest_example_data(context):

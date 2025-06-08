@@ -1,6 +1,5 @@
 from dagster import Definitions, load_assets_from_modules
 from shared.resources import raw_data_resource, output_dir_resource
-from . import assets
 import importlib
 from .jobs import etl_job
 from .schedules import etl_daily_schedule
@@ -13,7 +12,6 @@ vocab = importlib.import_module(".4_vocab_from_train_data.assets", __package__)
 
 defs = Definitions(
     assets=load_assets_from_modules([
-        assets,
         ingest,
         tokenize,
         split,
@@ -27,3 +25,5 @@ defs = Definitions(
     schedules=[etl_daily_schedule],
     sensors=[etl_sensor],
 )
+
+definitions = defs

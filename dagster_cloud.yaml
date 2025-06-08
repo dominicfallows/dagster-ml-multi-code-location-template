@@ -18,22 +18,22 @@
 #       # image: myorg/my-etl:latest
 #
 locations:
-  - location_name: 1-etl
+  - location_name: 1_etl
     build:
       directory: 1_etl_code_location
     code_source:
       package_name: 1_etl
-  - location_name: 2-model
+  - location_name: 2_model
     build:
       directory: 2_model_code_location
     code_source:
       package_name: 2_model
-  - location_name: 3-evaluate
+  - location_name: 3_evaluate
     build:
       directory: 3_evaluate_code_location
     code_source:
       package_name: 3_evaluate
-  - location_name: 4-deploy
+  - location_name: 4_deploy
     build:
       directory: 4_deploy_code_location
     code_source:

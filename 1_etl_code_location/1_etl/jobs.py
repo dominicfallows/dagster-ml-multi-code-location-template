@@ -1,5 +1,4 @@
 from dagster import define_asset_job
-from . import assets
 import importlib
 
 ingest = importlib.import_module(".1_ingest.assets", __package__)

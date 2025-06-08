@@ -58,8 +58,8 @@ A Python-based CLI is provided in `scripts/cli.py` to automate setup and common 
 
 - `python scripts/cli.py setup` — Set up all Python environments and install dependencies ([Dagster installation docs](https://docs.dagster.io/getting-started/installation))
 - `python scripts/cli.py clean` — Remove all virtual environments and Python caches
-- `python scripts/cli.py webserver` — Start the Dagster webserver for the whole project
-- `python scripts/cli.py webserver <location>` — Start the webserver for a single code location (e.g., `python scripts/cli.py webserver 1_etl_code_location`)
+- `python scripts/cli.py dev` — Start the Dagster dev webserver for the whole project
+- `python scripts/cli.py dev <location>` — Start the dev webserver for a single code location (e.g., `python scripts/cli.py dev 1_etl_code_location`)
 - `python scripts/cli.py test` — Run tests in all code locations
 - `python scripts/cli.py --help` — Show help and list available commands and options
 
@@ -68,7 +68,7 @@ A Python-based CLI is provided in `scripts/cli.py` to automate setup and common 
 ```sh
 python scripts/cli.py setup
 source .venv/bin/activate
-python scripts/cli.py webserver  # Loads all code locations as defined in workspace.yaml
+python scripts/cli.py dev  # Loads all code locations as defined in workspace.yaml
 ```
 
 See `scripts/cli.py` for more commands and details.

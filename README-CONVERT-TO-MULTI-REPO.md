@@ -5,7 +5,7 @@ This template is designed for a mono-repo setup, but you can easily split each c
 ## Steps to Convert to Multi-Repo
 
 1. **Create a New Repo for Each Code Location**
-   - For each code location (e.g., `1-etl-code-location`), create a new GitHub repository (e.g., `my-etl-repo`).
+   - For each code location (e.g., `1_etl-code-location`), create a new GitHub repository (e.g., `my-etl-repo`).
    - Move the code location folder contents into the new repo root.
 
 2. **Update Python Packaging**
