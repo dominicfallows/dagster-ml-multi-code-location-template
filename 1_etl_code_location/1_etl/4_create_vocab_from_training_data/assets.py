@@ -1,19 +1,20 @@
 # This module extracts the vocabulary from the training data split.
 from dagster import asset
 
-@asset
-def vocab_from_train_data(context, split_asset):
+
+@asset(name="create_vocab_from_training_data_asset",)
+def create_vocab_from_training_data(context, split_tokenized_data_asset):
     """
     Extracts the vocabulary from the training data split.
     Args:
         context: Dagster context.
-        split_asset: Data splits with 'train' key.
+        split_tokenized_data_asset: Data splits with 'train' key.
     Returns:
         list[str]: List of vocabulary tokens.
 
     See Dagster concepts: https://docs.dagster.io/getting-started/concepts
     """
-    train = split_asset["train"]
+    train = split_tokenized_data_asset["train"]
     vocab = set()
     for row in train:
         vocab.update(row["tokens"])

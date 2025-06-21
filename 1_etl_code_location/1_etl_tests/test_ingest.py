@@ -1,5 +1,6 @@
 import pytest
-from 1_etl.1_ingest.assets import ingest_example_data
+from 1_etl.1_ingest_data.assets import ingest_example_data
+
 
 def test_ingest_example_data():
     data = ingest_example_data(None)

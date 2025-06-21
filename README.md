@@ -33,10 +33,10 @@ For more on Dagster concepts, see the [Dagster Documentation](https://docs.dagst
 - **/example_input_files_resource/**: Example input data for the pipeline
 - **/example_output_resources/**: Example output data for the pipeline
 - **/1_etl_code_location/**: Data ingestion, tokenization, vocabulary extraction, and splitting (ETL pipeline)
-  - **1_etl/1_ingest/**: Data ingestion assets (uses Dagster resource for raw data)
-  - **1_etl/2_tokenize/**: Tokenization assets
-  - **1_etl/3_split_data/**: Data splitting assets
-  - **1_etl/4_vocab_from_train_data/**: Vocabulary extraction from train split
+  - **1_etl/1_ingest_data/**: Data ingestion assets (uses Dagster resource for raw data)
+  - **1_etl/2_tokenize_data/**: Tokenization assets
+  - **1_etl/3_split_tokenized_data/**: Data splitting assets
+  - **1_etl/4_create_vocab_from_training_data/**: Vocabulary extraction from train split
 - **/2_model_code_location/**: Model definition and training
 - **/3_evaluate_code_location/**: Model evaluation and metrics
 - **/4_deploy_code_location/**: Model deployment, packaging, and serving (outputs to example_output_resources via resource)

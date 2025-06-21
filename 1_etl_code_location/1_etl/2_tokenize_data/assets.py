@@ -2,13 +2,14 @@
 from dagster import asset
 from shared.tokenizer import simple_tokenizer
 
-@asset
-def tokenize_asset(context, ingest_example_data):
+
+@asset(name="tokenized_data_asset")
+def tokenize_example_data(context, ingest_data_asset):
     """
     Tokenizes the ingested example data using a shared tokenizer.
     Args:
         context: Dagster context.
-        ingest_example_data: List of ingested data rows.
+        ingest_data_asset: List of ingested data rows.
     Returns:
         list[dict]: List of tokenized data rows.
 
@@ -16,7 +17,7 @@ def tokenize_asset(context, ingest_example_data):
     """
     # Use shared simple_tokenizer for consistency
     tokenized = [
-        {"id": row["id"], "tokens": simple_tokenizer(row["text"])} for row in ingest_example_data
+        {"id": row["id"], "tokens": simple_tokenizer(row["text"])} for row in ingest_data_asset
     ]
     context.log.info(f"Tokenized data: {tokenized}")
     return tokenized

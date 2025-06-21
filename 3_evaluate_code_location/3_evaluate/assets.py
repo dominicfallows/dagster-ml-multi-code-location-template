@@ -2,21 +2,21 @@ from dagster import asset, SourceAsset
 
 
 train_model_asset = SourceAsset("train_model_asset")
-split_asset = SourceAsset("split_asset")
+split_tokenized_data_asset = SourceAsset("split_tokenized_data_asset")
 
 
 @asset
-def evaluate_model_asset(context, train_model_asset, split_asset):
+def evaluate_model_asset(context, train_model_asset, split_tokenized_data_asset):
     """
     Evaluates the model on the test set by checking how many tokens are in the model's grouped vocabulary.
     Args:
         context: Dagster context.
         train_model_asset (dict): Model output with 'grouped_vocab' key.
-        split_asset (dict): Data splits with 'test' key.
+        split_tokenized_data_asset (dict): Data splits with 'test' key.
     Returns:
         dict: {"accuracy": float}
     """
-    test = split_asset.get("test", [])
+    test = split_tokenized_data_asset.get("test", [])
     # Flatten grouped_vocab to a set
     grouped_vocab = train_model_asset.get("grouped_vocab", [])
     vocab = set()

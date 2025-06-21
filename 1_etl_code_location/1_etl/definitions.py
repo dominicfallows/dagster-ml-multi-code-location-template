@@ -5,17 +5,22 @@ from .jobs import etl_job
 from .schedules import etl_daily_schedule
 from .sensors import etl_sensor
 
-ingest = importlib.import_module(".1_ingest.assets", __package__)
-tokenize = importlib.import_module(".2_tokenize.assets", __package__)
-split = importlib.import_module(".3_split_data.assets", __package__)
-vocab = importlib.import_module(".4_vocab_from_train_data.assets", __package__)
+ingest_data = importlib.import_module(".1_ingest_data.assets", __package__)
+tokenize_data = importlib.import_module(".2_tokenize_data.assets", __package__)
+split_tokenized_data = importlib.import_module(
+    ".3_split_tokenized_data.assets", __package__)
+create_vocab_from_training_data = importlib.import_module(
+    ".4_create_vocab_from_training_data.assets", __package__)
+output_materialized_assets = importlib.import_module(
+    ".5_output_materialized_assets.assets", __package__)
 
 defs = Definitions(
     assets=load_assets_from_modules([
-        ingest,
-        tokenize,
-        split,
-        vocab
+        ingest_data,
+        tokenize_data,
+        split_tokenized_data,
+        create_vocab_from_training_data,
+        output_materialized_assets
     ]),
     resources={
         "input_files_resource": input_files_resource,

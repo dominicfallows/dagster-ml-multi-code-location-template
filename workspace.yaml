@@ -29,8 +29,8 @@ load_from:
   - python_package:
       package_name: 1_etl
       location_name: 1_etl
-      working_directory: 1_etl_code_location
       executable_path: ./1_etl_code_location/.venv/bin/python
+      working_directory: 1_etl_code_location
 
   - python_package:
       package_name: 2_model

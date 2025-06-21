@@ -1,0 +1,6 @@
+ops:
+  split_tokenized_data_asset:
+    config:
+      train_ratio: 0.7
+      validate_ratio: 0.15
+      test_ratio: 0.15

@@ -1,7 +1,7 @@
 from dagster import asset
 
 
-@asset(required_resource_keys={"input_files_resource"})
+@asset(name="ingest_data_asset", required_resource_keys={"input_files_resource"})
 def ingest_example_data(context):
     """
     Loads example data from the input_files_resource Dagster resource.

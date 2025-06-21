@@ -133,6 +133,6 @@ dmypy.json
 # Example storage locations
 example_input_files_resource/*
 !example_input_files_resource/raw_input_data.json
-example_output_files_resources/*
+example_output_files_resource/*
 example_persistent_home/*
 !example_persistent_home/dagster.yaml
