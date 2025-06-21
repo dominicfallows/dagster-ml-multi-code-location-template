@@ -30,7 +30,8 @@ For more on Dagster concepts, see the [Dagster Documentation](https://docs.dagst
 - **/dagster_cloud.yaml**: Defines Dagster code locations for deployment ([docs](https://docs.dagster.io/concepts/code-locations#code-locations))
 - **/workspace.yaml**: Configures local Dagster workspace and code location loading ([docs](https://docs.dagster.io/concepts/code-locations/workspaces))
 - **/shared_code_location/**: Shared Python code (utilities, tokenization, I/O) importable by all code locations
-- **/example_resources/**: Example input and output data for the pipeline
+- **/example_input_files_resource/**: Example input data for the pipeline
+- **/example_output_resources/**: Example output data for the pipeline
 - **/1_etl_code_location/**: Data ingestion, tokenization, vocabulary extraction, and splitting (ETL pipeline)
   - **1_etl/1_ingest/**: Data ingestion assets (uses Dagster resource for raw data)
   - **1_etl/2_tokenize/**: Tokenization assets
@@ -38,7 +39,7 @@ For more on Dagster concepts, see the [Dagster Documentation](https://docs.dagst
   - **1_etl/4_vocab_from_train_data/**: Vocabulary extraction from train split
 - **/2_model_code_location/**: Model definition and training
 - **/3_evaluate_code_location/**: Model evaluation and metrics
-- **/4_deploy_code_location/**: Model deployment, packaging, and serving (outputs to example_resources via resource)
+- **/4_deploy_code_location/**: Model deployment, packaging, and serving (outputs to example_output_resources via resource)
 
 Each code location contains:
 
@@ -75,6 +76,12 @@ python scripts/cli.py dev  # Loads all code locations as defined in workspace.ya
 
 See `scripts/cli.py` for more commands and details.
 
+**Note about persistent storage:** When running `python scripts/cli.py dev`, the CLI automatically sets `DAGSTER_HOME` to `./example_persistent_home`. Otherwise, you can set it manually:
+
+```sh
+export DAGSTER_HOME=./example_persistent_home
+```
+
 ## Mono-Repo vs Multi-Repo
 
 - **Mono-repo (default):** All code locations live in one repository. `workspace.yaml` and `dagster_cloud.yaml` reference local directories
@@ -94,17 +101,17 @@ See `README-CONVERT-TO-MULTI-REPO.md` for a step-by-step guide to splitting this
 
 ## Example Pipeline Flow
 
-1. **Ingest**: Loads example data from a Dagster resource in `example_resources`
+1. **Ingest**: Loads example data from a Dagster resource in `example_input_files_resource`
 2. **Tokenize**: Splits text into tokens using a shared tokenizer
 3. **Split**: Splits data into train/test sets
 4. **Vocab Extraction**: Extracts vocabulary from the train set for use by the model
 5. **Model**: Trains a simple model using the extracted vocabulary
 6. **Evaluate**: Evaluates the model on the test set
-7. **Deploy**: Saves the model as a mock ONNX file using a Dagster resource for output location in `example_resources`
+7. **Deploy**: Saves the model as a mock ONNX file using a Dagster resource for output location in `example_output_files_resource`
 
 ## Dagster Concepts Demoed
 
-- **Resources**: Used for raw data input and output directory (see `example_resources`)
+- **Resources**: Used for raw data input and output directory (see `example_input_files_resource` and `example_output_files_resource`)
 - **Assets**: Each pipeline step is a Dagster asset
 - **Definitions**: Assets and resources are registered in Definitions objects
 

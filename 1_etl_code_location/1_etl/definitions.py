@@ -1,5 +1,5 @@
 from dagster import Definitions, load_assets_from_modules
-from shared.resources import raw_data_resource, output_dir_resource
+from shared.resources import input_files_resource, output_files_resource
 import importlib
 from .jobs import etl_job
 from .schedules import etl_daily_schedule
@@ -18,8 +18,8 @@ defs = Definitions(
         vocab
     ]),
     resources={
-        "raw_data_resource": raw_data_resource,
-        "output_dir_resource": output_dir_resource,
+        "input_files_resource": input_files_resource,
+        "output_files_resource": output_files_resource,
     },
     jobs=[etl_job],
     schedules=[etl_daily_schedule],

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import sys
 import subprocess
+import os
 from pathlib import Path
 import argparse
 import shutil
@@ -63,6 +64,9 @@ def test():
 
 
 def dev(location=None):
+    # Persist Dagster instance data to example_persistent_home
+    env = os.environ.copy()
+    env["DAGSTER_HOME"] = str(Path("example_persistent_home").absolute())
     dagster_executable = Path(".venv/bin/dagster")
     if location:
         if location not in CODE_LOCATIONS:
@@ -72,10 +76,10 @@ def dev(location=None):
         loc_dir = location
         workspace_path = Path("../workspace.yaml")
         subprocess.run([str(dagster_executable), "dev", "-w",
-                       str(workspace_path)], cwd=loc_dir, check=True)
+                       str(workspace_path)], cwd=loc_dir, check=True, env=env)
     else:
         subprocess.run([str(dagster_executable), "dev",
-                       "-w", "workspace.yaml"], check=True)
+                       "-w", "workspace.yaml"], check=True, env=env)
     sys.exit(0)
 
 
