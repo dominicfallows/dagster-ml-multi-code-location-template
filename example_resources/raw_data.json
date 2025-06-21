@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "text": "Hello, world of data engineering! Hello, world of data engineering!"
+  },
+  {
+    "id": 2,
+    "text": "Dagster streamlines data workflows beautifully. Dagster streamlines data workflows beautifully."
+  },
+  {
+    "id": 3,
+    "text": "Exploring new datasets sparks creativity. Exploring new datasets sparks creativity."
+  },
+  {
+    "id": 4,
+    "text": "The quick brown fox leaped over a sleepy dog. The quick brown fox leaped over a sleepy dog."
+  },
+  {
+    "id": 5,
+    "text": "AI is revolutionizing how we solve problems. AI is revolutionizing how we solve problems."
+  },
+  {
+    "id": 6,
+    "text": "Python powers everything from web apps to AI. Python powers everything from web apps to AI."
+  },
+  {
+    "id": 7,
+    "text": "Late-night coding is best with a fresh cup of coffee. Late-night coding is best with a fresh cup of coffee."
+  },
+  {
+    "id": 8,
+    "text": "Writing unit tests catches bugs early. Writing unit tests catches bugs early."
+  },
+  {
+    "id": 9,
+    "text": "Cloud platforms scale applications seamlessly. Cloud platforms scale applications seamlessly."
+  },
+  {
+    "id": 10,
+    "text": "Open source communities drive innovation. Open source communities drive innovation."
+  },
+  {
+    "id": 11,
+    "text": "Automated data pipelines streamline ETL tasks. Automated data pipelines streamline ETL tasks."
+  },
+  {
+    "id": 12,
+    "text": "Continuous integration ensures reliable builds. Continuous integration ensures reliable builds."
+  },
+  {
+    "id": 13,
+    "text": "APIs enable seamless software interoperability. APIs enable seamless software interoperability."
+  },
+  {
+    "id": 14,
+    "text": "Version control keeps project history organized. Version control keeps project history organized."
+  },
+  {
+    "id": 15,
+    "text": "Debugging reveals hidden logic errors. Debugging reveals hidden logic errors."
+  },
+  {
+    "id": 16,
+    "text": "Training machine learning models requires diverse data. Training machine learning models requires diverse data."
+  },
+  {
+    "id": 17,
+    "text": "Clear documentation helps future developers. Clear documentation helps future developers."
+  },
+  {
+    "id": 18,
+    "text": "Docker makes deploying apps consistent everywhere. Docker makes deploying apps consistent everywhere."
+  },
+  {
+    "id": 19,
+    "text": "JSON is lightweight and easy to parse. JSON is lightweight and easy to parse."
+  },
+  {
+    "id": 20,
+    "text": "GraphQL lets clients request exactly what they need. GraphQL lets clients request exactly what they need."
+  },
+  {
+    "id": 21,
+    "text": "Microservices split systems into manageable pieces. Microservices split systems into manageable pieces."
+  },
+  {
+    "id": 22,
+    "text": "DevOps practices speed up software delivery. DevOps practices speed up software delivery."
+  },
+  {
+    "id": 23,
+    "text": "Agile sprints encourage rapid iteration. Agile sprints encourage rapid iteration."
+  },
+  {
+    "id": 24,
+    "text": "Encryption keeps user data confidential. Encryption keeps user data confidential."
+  },
+  {
+    "id": 25,
+    "text": "Mobile devices connect us to the world. Mobile devices connect us to the world."
+  },
+  {
+    "id": 26,
+    "text": "Edge computing reduces latency for IoT devices. Edge computing reduces latency for IoT devices."
+  },
+  {
+    "id": 27,
+    "text": "NLP enables machines to understand language. NLP enables machines to understand language."
+  },
+  {
+    "id": 28,
+    "text": "Big data analytics reveals business insights. Big data analytics reveals business insights."
+  },
+  {
+    "id": 29,
+    "text": "Serverless architectures simplify scaling. Serverless architectures simplify scaling."
+  },
+  {
+    "id": 30,
+    "text": "Well-documented APIs are easier to adopt. Well-documented APIs are easier to adopt."
+  },
+  {
+    "id": 31,
+    "text": "Great UX design delights users. Great UX design delights users."
+  },
+  {
+    "id": 32,
+    "text": "Blockchain technology secures digital transactions. Blockchain technology secures digital transactions."
+  },
+  {
+    "id": 33,
+    "text": "Quantum computers promise exponential speedups. Quantum computers promise exponential speedups."
+  },
+  {
+    "id": 34,
+    "text": "Remote teams collaborate across time zones. Remote teams collaborate across time zones."
+  },
+  {
+    "id": 35,
+    "text": "Automated tests catch regressions quickly. Automated tests catch regressions quickly."
+  },
+  {
+    "id": 36,
+    "text": "REST APIs are the backbone of modern web apps. REST APIs are the backbone of modern web apps."
+  },
+  {
+    "id": 37,
+    "text": "Continuous deployment delivers features faster. Continuous deployment delivers features faster."
+  },
+  {
+    "id": 38,
+    "text": "Functional programming avoids side effects. Functional programming avoids side effects."
+  },
+  {
+    "id": 39,
+    "text": "Daily standups keep teams aligned. Daily standups keep teams aligned."
+  },
+  {
+    "id": 40,
+    "text": "IoT sensors collect real-time environmental data. IoT sensors collect real-time environmental data."
+  },
+  {
+    "id": 41,
+    "text": "Cybersecurity defends against digital threats. Cybersecurity defends against digital threats."
+  },
+  {
+    "id": 42,
+    "text": "SQL queries extract insights from structured data. SQL queries extract insights from structured data."
+  },
+  {
+    "id": 43,
+    "text": "NoSQL databases handle unstructured information. NoSQL databases handle unstructured information."
+  },
+  {
+    "id": 44,
+    "text": "Peer code reviews catch subtle mistakes. Peer code reviews catch subtle mistakes."
+  },
+  {
+    "id": 45,
+    "text": "Pair programming boosts team learning. Pair programming boosts team learning."
+  },
+  {
+    "id": 46,
+    "text": "Kanban boards track project progress visually. Kanban boards track project progress visually."
+  },
+  {
+    "id": 47,
+    "text": "APIs can be internal or exposed to partners. APIs can be internal or exposed to partners."
+  },
+  {
+    "id": 48,
+    "text": "Charts and graphs make data easier to understand. Charts and graphs make data easier to understand."
+  },
+  {
+    "id": 49,
+    "text": "Cloud storage keeps files accessible anywhere. Cloud storage keeps files accessible anywhere."
+  },
+  {
+    "id": 50,
+    "text": "Sprints help teams deliver incremental value. Sprints help teams deliver incremental value."
+  },
+  {
+    "id": 51,
+    "text": "Containers package dependencies for portability. Containers package dependencies for portability."
+  },
+  {
+    "id": 52,
+    "text": "Load balancers distribute requests efficiently. Load balancers distribute requests efficiently."
+  },
+  {
+    "id": 53,
+    "text": "Authentication checks who you are. Authentication checks who you are."
+  },
+  {
+    "id": 54,
+    "text": "Authorization determines what you can access. Authorization determines what you can access."
+  },
+  {
+    "id": 55,
+    "text": "Low latency improves interactive experiences. Low latency improves interactive experiences."
+  },
+  {
+    "id": 56,
+    "text": "Caching stores frequently used data for speed. Caching stores frequently used data for speed."
+  },
+  {
+    "id": 57,
+    "text": "Webhooks notify systems of real-time events. Webhooks notify systems of real-time events."
+  },
+  {
+    "id": 58,
+    "text": "Feature flags control feature rollouts safely. Feature flags control feature rollouts safely."
+  },
+  {
+    "id": 59,
+    "text": "A/B tests compare different user experiences. A/B tests compare different user experiences."
+  },
+  {
+    "id": 60,
+    "text": "Responsive layouts adapt to any device. Responsive layouts adapt to any device."
+  },
+  {
+    "id": 61,
+    "text": "Accessible apps reach a wider audience. Accessible apps reach a wider audience."
+  },
+  {
+    "id": 62,
+    "text": "Single sign-on streamlines user logins. Single sign-on streamlines user logins."
+  },
+  {
+    "id": 63,
+    "text": "OAuth lets users grant limited access securely. OAuth lets users grant limited access securely."
+  },
+  {
+    "id": 64,
+    "text": "WebAssembly runs high-performance code in browsers. WebAssembly runs high-performance code in browsers."
+  },
+  {
+    "id": 65,
+    "text": "PWAs offer offline capabilities and push notifications. PWAs offer offline capabilities and push notifications."
+  },
+  {
+    "id": 66,
+    "text": "API gateways centralize security and routing. API gateways centralize security and routing."
+  },
+  {
+    "id": 67,
+    "text": "Infrastructure as code manages resources programmatically. Infrastructure as code manages resources programmatically."
+  },
+  {
+    "id": 68,
+    "text": "Monitoring dashboards visualize system health. Monitoring dashboards visualize system health."
+  },
+  {
+    "id": 69,
+    "text": "Incident response plans prepare teams for outages. Incident response plans prepare teams for outages."
+  },
+  {
+    "id": 70,
+    "text": "Aggregated logs simplify debugging complex systems. Aggregated logs simplify debugging complex systems."
+  },
+  {
+    "id": 71,
+    "text": "Static site generators create fast, secure websites. Static site generators create fast, secure websites."
+  },
+  {
+    "id": 72,
+    "text": "CDNs deliver content quickly to global users. CDNs deliver content quickly to global users."
+  },
+  {
+    "id": 73,
+    "text": "API rate limits protect against excessive usage. API rate limits protect against excessive usage."
+  },
+  {
+    "id": 74,
+    "text": "Data lakes store vast amounts of raw data. Data lakes store vast amounts of raw data."
+  },
+  {
+    "id": 75,
+    "text": "ETL jobs clean and load data into warehouses. ETL jobs clean and load data into warehouses."
+  },
+  {
+    "id": 76,
+    "text": "Data warehouses power business analytics. Data warehouses power business analytics."
+  },
+  {
+    "id": 77,
+    "text": "Anomaly detection spots unexpected trends. Anomaly detection spots unexpected trends."
+  },
+  {
+    "id": 78,
+    "text": "Synthetic data helps train robust models. Synthetic data helps train robust models."
+  },
+  {
+    "id": 79,
+    "text": "Feature engineering boosts predictive accuracy. Feature engineering boosts predictive accuracy."
+  },
+  {
+    "id": 80,
+    "text": "Hyperparameter search finds optimal model settings. Hyperparameter search finds optimal model settings."
+  },
+  {
+    "id": 81,
+    "text": "Model drift requires ongoing evaluation. Model drift requires ongoing evaluation."
+  },
+  {
+    "id": 82,
+    "text": "Explainable AI clarifies model decisions. Explainable AI clarifies model decisions."
+  },
+  {
+    "id": 83,
+    "text": "Reinforcement learning optimizes actions via feedback. Reinforcement learning optimizes actions via feedback."
+  },
+  {
+    "id": 84,
+    "text": "Transfer learning accelerates new model training. Transfer learning accelerates new model training."
+  },
+  {
+    "id": 85,
+    "text": "Labeling data is crucial for supervised learning. Labeling data is crucial for supervised learning."
+  },
+  {
+    "id": 86,
+    "text": "Deploying models brings AI into production. Deploying models brings AI into production."
+  },
+  {
+    "id": 87,
+    "text": "Edge AI processes information close to the source. Edge AI processes information close to the source."
+  },
+  {
+    "id": 88,
+    "text": "Federated learning keeps data decentralized. Federated learning keeps data decentralized."
+  },
+  {
+    "id": 89,
+    "text": "Synthetic monitoring mimics user interactions. Synthetic monitoring mimics user interactions."
+  },
+  {
+    "id": 90,
+    "text": "Chaos engineering validates system robustness. Chaos engineering validates system robustness."
+  },
+  {
+    "id": 91,
+    "text": "Blue-green deployments reduce release risks. Blue-green deployments reduce release risks."
+  },
+  {
+    "id": 92,
+    "text": "Canary releases test new code with small audiences. Canary releases test new code with small audiences."
+  },
+  {
+    "id": 93,
+    "text": "Immutable infrastructure avoids configuration drift. Immutable infrastructure avoids configuration drift."
+  },
+  {
+    "id": 94,
+    "text": "Zero trust security verifies every request. Zero trust security verifies every request."
+  },
+  {
+    "id": 95,
+    "text": "API mocking accelerates frontend development. API mocking accelerates frontend development."
+  },
+  {
+    "id": 96,
+    "text": "Service meshes manage microservice traffic. Service meshes manage microservice traffic."
+  },
+  {
+    "id": 97,
+    "text": "Observability combines metrics, logs, and traces. Observability combines metrics, logs, and traces."
+  },
+  {
+    "id": 98,
+    "text": "Self-healing systems recover from failures automatically. Self-healing systems recover from failures automatically."
+  },
+  {
+    "id": 99,
+    "text": "Infrastructure monitoring detects issues early. Infrastructure monitoring detects issues early."
+  },
+  {
+    "id": 100,
+    "text": "Event-driven systems respond instantly to changes. Event-driven systems respond instantly to changes."
+  }
+]
